@@ -28,78 +28,42 @@
     display: flex; align-items: center; gap: 12px;
   }
   header h1 { font-size: 1.3rem; letter-spacing: 1px; }
-  header span { font-size: 1.5rem; }
   .badge { background: var(--accent); color: #fff; font-size: 0.65rem; padding: 2px 8px; border-radius: 20px; font-weight: 700; letter-spacing: 1px; }
 
   .layout { display: grid; grid-template-columns: 220px 1fr; min-height: calc(100vh - 57px); }
 
-  nav {
-    background: var(--surface);
-    border-right: 1px solid var(--border);
-    padding: 24px 0;
-  }
-  nav a {
-    display: block; padding: 10px 24px;
-    color: var(--muted); text-decoration: none; font-size: 0.9rem;
-    transition: color .15s, background .15s;
-    cursor: pointer;
-  }
+  nav { background: var(--surface); border-right: 1px solid var(--border); padding: 24px 0; }
+  nav a { display: block; padding: 10px 24px; color: var(--muted); text-decoration: none; font-size: 0.9rem; cursor: pointer; transition: color .15s, background .15s; }
   nav a:hover, nav a.active { color: var(--text); background: rgba(233,69,96,.08); border-left: 2px solid var(--accent); }
   nav .section-label { padding: 16px 24px 4px; font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
 
   main { padding: 32px; overflow-y: auto; }
-
   .page { display: none; }
   .page.active { display: block; }
 
-  h2 { font-size: 1.1rem; margin-bottom: 20px; color: var(--text); }
+  h2 { font-size: 1.1rem; margin-bottom: 20px; }
   h3 { font-size: 0.9rem; margin-bottom: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
 
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
 
   .stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
-  .stat {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px; padding: 16px;
-    text-align: center;
-  }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px; text-align: center; }
   .stat-val { font-size: 2rem; font-weight: 700; color: var(--accent); font-family: var(--mono); }
   .stat-label { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
 
-  input, select {
-    background: #12121f; border: 1px solid var(--border);
-    color: var(--text); border-radius: 6px;
-    padding: 8px 12px; font-size: 0.9rem; outline: none;
-    width: 100%;
-  }
+  input { background: #12121f; border: 1px solid var(--border); color: var(--text); border-radius: 6px; padding: 8px 12px; font-size: 0.9rem; outline: none; width: 100%; }
   input:focus { border-color: var(--accent); }
 
   .form-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; align-items: end; margin-bottom: 16px; }
   label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 4px; }
 
-  button {
-    background: var(--accent); color: #fff;
-    border: none; border-radius: 6px;
-    padding: 9px 18px; font-size: 0.85rem; font-weight: 600;
-    cursor: pointer; white-space: nowrap;
-    transition: opacity .15s;
-  }
+  button { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 9px 18px; font-size: 0.85rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: opacity .15s; }
   button:hover { opacity: .85; }
-  button.secondary { background: var(--accent2); }
-  button.danger    { background: #c0392b; }
-  button.ghost     { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+  button.danger { background: #c0392b; }
+  button.ghost  { background: transparent; border: 1px solid var(--border); color: var(--muted); }
   button.ghost:hover { border-color: var(--accent); color: var(--text); }
 
-  .admin-gate {
-    max-width: 360px; margin: 60px auto; text-align: center;
-  }
+  .admin-gate { max-width: 360px; margin: 80px auto; padding: 0 24px; text-align: center; }
   .admin-gate h2 { margin-bottom: 20px; }
   .admin-gate input { margin-bottom: 12px; }
 
@@ -113,51 +77,37 @@
   .copy-btn { background: none; border: 1px solid var(--border); color: var(--muted); padding: 3px 8px; font-size: 0.7rem; border-radius: 4px; cursor: pointer; }
   .copy-btn:hover { border-color: var(--accent); color: var(--text); }
 
-  .pill {
-    display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;
-  }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; }
   .pill.green  { background: rgba(46,204,113,.15); color: var(--green); }
   .pill.red    { background: rgba(233,69,96,.15);  color: var(--red); }
   .pill.yellow { background: rgba(241,196,15,.15); color: var(--yellow); }
 
-  .toast {
-    position: fixed; bottom: 24px; right: 24px;
-    background: var(--surface); border: 1px solid var(--border);
-    border-left: 3px solid var(--green);
-    padding: 12px 20px; border-radius: 8px;
-    font-size: 0.85rem; opacity: 0;
-    transition: opacity .25s; pointer-events: none;
-    z-index: 999;
-  }
-  .toast.show { opacity: 1; }
-  .toast.error { border-left-color: var(--red); }
-
   .empty { color: var(--muted); font-size: 0.85rem; padding: 20px 0; text-align: center; }
 
-  #adminPassInput { margin-bottom: 0; }
+  .toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green); padding: 12px 20px; border-radius: 8px; font-size: 0.85rem; opacity: 0; transition: opacity .25s; pointer-events: none; z-index: 999; }
+  .toast.show { opacity: 1; }
+  .toast.error { border-left-color: var(--red); }
 </style>
 </head>
 <body>
 
-<header>
-  <span>🛡️</span>
-  <h1>CheeseGuard</h1>
-  <span class="badge">DASHBOARD</span>
-</header>
-
 <!-- ADMIN GATE -->
-<div id="adminGate" class="admin-gate" style="padding:0 24px;">
-  <h2>🔐 Admin Login</h2>
+<div id="adminGate" class="admin-gate">
+  <h2>🛡️ CheeseGuard</h2>
   <label>Admin Password</label>
   <input type="password" id="adminPassInput" placeholder="Enter admin password" onkeydown="if(event.key==='Enter')login()">
   <br><br>
   <button onclick="login()" style="width:100%">Unlock Dashboard</button>
-  <p id="loginErr" style="color:var(--red);font-size:.8rem;margin-top:10px;"></p>
+  <p id="loginErr" style="color:var(--red);font-size:.8rem;margin-top:10px;min-height:1.2em;"></p>
 </div>
 
-<!-- MAIN LAYOUT (hidden until authed) -->
+<!-- MAIN LAYOUT -->
 <div class="layout" id="mainLayout" style="display:none">
   <nav>
+    <header style="padding:16px 24px;border-bottom:1px solid var(--border);margin-bottom:8px;">
+      <span style="font-size:1.1rem;font-weight:700;">🛡️ CheeseGuard</span>
+      <span class="badge" style="margin-left:8px;">DASHBOARD</span>
+    </header>
     <div class="section-label">Overview</div>
     <a onclick="showPage('overview')" class="active" id="nav-overview">📊 Overview</a>
     <div class="section-label">Management</div>
@@ -165,7 +115,7 @@
     <a onclick="showPage('sessions')" id="nav-sessions">👤 Sessions</a>
     <a onclick="showPage('bans')"     id="nav-bans">🚫 Bans</a>
     <div class="section-label">Account</div>
-    <a onclick="logout()" id="nav-logout">🚪 Logout</a>
+    <a onclick="doLogout()">🚪 Logout</a>
   </nav>
 
   <main>
@@ -179,9 +129,9 @@
         <div class="stat"><div class="stat-val" id="stat-bans">—</div><div class="stat-label">Bans</div></div>
       </div>
       <div class="card">
-        <h3>Extension Setup</h3>
-        <p style="font-size:.85rem;color:var(--muted);margin-bottom:12px;">Load <strong>cheeseguard.js</strong> in TurboWarp, then use these blocks at game start:</p>
-        <pre style="background:#12121f;padding:14px;border-radius:6px;font-size:.78rem;color:#aef;overflow-x:auto;">authenticate with key [YOUR_KEY] at [<span id="origin-label">https://yoursite.com</span>]
+        <h3>Quick Start</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:12px;">Load <strong>cheeseguard.js</strong> in TurboWarp as a custom extension, then use at game start:</p>
+        <pre style="background:#12121f;padding:14px;border-radius:6px;font-size:.78rem;color:#aef;overflow-x:auto;line-height:1.6">authenticate with key [YOUR_KEY]
 poll server every [3000] ms
 set max move distance to [10]
 limit [SHOOT] to [5] per [1000] ms</pre>
@@ -194,19 +144,13 @@ limit [SHOOT] to [5] per [1000] ms</pre>
       <div class="card">
         <h3>Generate New Key</h3>
         <div class="form-row">
-          <div>
-            <label>Label</label>
-            <input id="newKeyLabel" placeholder="e.g. VIGIL Production">
-          </div>
-          <div>
-            <label>Game ID (optional)</label>
-            <input id="newKeyGame" placeholder="e.g. vigil">
-          </div>
-          <button onclick="createKey()">Generate Key</button>
+          <div><label>Label</label><input id="newKeyLabel" placeholder="e.g. VIGIL Production"></div>
+          <div><label>Game ID (optional)</label><input id="newKeyGame" placeholder="e.g. vigil"></div>
+          <button onclick="createKey()">Generate</button>
         </div>
       </div>
       <div class="card">
-        <h3>Active Keys</h3>
+        <h3>All Keys</h3>
         <table>
           <thead><tr><th>Key</th><th>Label</th><th>Game</th><th>Sessions</th><th>Created</th><th>Status</th><th></th></tr></thead>
           <tbody id="keys-tbody"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
@@ -217,9 +161,7 @@ limit [SHOOT] to [5] per [1000] ms</pre>
     <!-- SESSIONS -->
     <div class="page" id="page-sessions">
       <h2>Active Sessions</h2>
-      <div style="margin-bottom:14px;display:flex;gap:10px;">
-        <button class="ghost" onclick="loadSessions()">↻ Refresh</button>
-      </div>
+      <div style="margin-bottom:14px;"><button class="ghost" onclick="loadSessions()">↻ Refresh</button></div>
       <div class="card">
         <table>
           <thead><tr><th>Player ID</th><th>Session ID</th><th>Key</th><th>Violations</th><th>Last Seen</th><th></th></tr></thead>
@@ -234,20 +176,11 @@ limit [SHOOT] to [5] per [1000] ms</pre>
       <div class="card">
         <h3>Add Manual Ban</h3>
         <div class="form-row">
-          <div>
-            <label>Player ID</label>
-            <input id="banPlayerId" placeholder="player ID">
-          </div>
-          <div>
-            <label>Duration (mins)</label>
-            <input id="banMins" type="number" value="60" placeholder="60">
-          </div>
+          <div><label>Player ID</label><input id="banPlayerId" placeholder="player ID"></div>
+          <div><label>Duration (mins)</label><input id="banMins" type="number" value="60"></div>
           <button class="danger" onclick="addBan()">Ban Player</button>
         </div>
-        <div style="margin-top:-6px;">
-          <label>Reason</label>
-          <input id="banReason" placeholder="MANUAL_BAN">
-        </div>
+        <div><label>Reason</label><input id="banReason" placeholder="MANUAL_BAN"></div>
       </div>
       <div class="card">
         <table>
@@ -264,9 +197,8 @@ limit [SHOOT] to [5] per [1000] ms</pre>
 
 <script>
   let ADMIN_PASS = "";
-  const API = () => window.location.origin;
 
-  async function apiFetch(path, opts = {}) {
+  async function api(path, opts = {}) {
     const res = await fetch(path, {
       ...opts,
       headers: { "Content-Type": "application/json", "x-admin-password": ADMIN_PASS, ...(opts.headers || {}) }
@@ -278,60 +210,55 @@ limit [SHOOT] to [5] per [1000] ms</pre>
     const t = document.getElementById("toast");
     t.textContent = msg;
     t.className = "toast show" + (err ? " error" : "");
-    setTimeout(() => t.className = "toast", 2500);
+    setTimeout(() => t.className = "toast", 2800);
   }
 
   function copyText(text) {
-    navigator.clipboard.writeText(text).then(() => toast("Copied to clipboard!"));
+    navigator.clipboard.writeText(text).then(() => toast("Copied!"));
   }
 
   async function login() {
     const pw = document.getElementById("adminPassInput").value;
-    const data = await apiFetch("/admin/keys", { headers: { "x-admin-password": pw } });
+    const data = await fetch("/admin/keys", { headers: { "x-admin-password": pw } }).then(r => r.json()).catch(() => ({}));
     if (data.ok) {
       ADMIN_PASS = pw;
-      document.getElementById("adminGate").style.display = "none";
-      document.getElementById("mainLayout").style.display = "grid";
-      document.getElementById("origin-label").textContent = window.location.origin;
-      loadAll();
+      document.getElementById("adminGate").style.display    = "none";
+      document.getElementById("mainLayout").style.display   = "grid";
+      loadOverview();
     } else {
       document.getElementById("loginErr").textContent = "Wrong password.";
     }
   }
 
-  function logout() {
+  function doLogout() {
     ADMIN_PASS = "";
-    document.getElementById("adminGate").style.display = "block";
+    document.getElementById("adminGate").style.display  = "block";
     document.getElementById("mainLayout").style.display = "none";
     document.getElementById("adminPassInput").value = "";
+    document.getElementById("loginErr").textContent = "";
   }
 
   function showPage(id) {
     document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
     document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
     document.getElementById("page-" + id).classList.add("active");
-    document.getElementById("nav-" + id).classList.add("active");
+    const navEl = document.getElementById("nav-" + id);
+    if (navEl) navEl.classList.add("active");
     if (id === "keys")     loadKeys();
     if (id === "sessions") loadSessions();
     if (id === "bans")     loadBans();
     if (id === "overview") loadOverview();
   }
 
-  async function loadAll() { loadOverview(); }
-
   async function loadOverview() {
-    const [kd, sd, bd] = await Promise.all([
-      apiFetch("/admin/keys"),
-      apiFetch("/admin/sessions"),
-      apiFetch("/admin/bans")
-    ]);
-    document.getElementById("stat-keys").textContent     = kd.ok ? kd.keys.filter(k=>k.active).length : "—";
+    const [kd, sd, bd] = await Promise.all([api("/admin/keys"), api("/admin/sessions"), api("/admin/bans")]);
+    document.getElementById("stat-keys").textContent     = kd.ok ? kd.keys.filter(k => k.active).length : "—";
     document.getElementById("stat-sessions").textContent = sd.ok ? sd.sessions.length : "—";
     document.getElementById("stat-bans").textContent     = bd.ok ? bd.bans.length : "—";
   }
 
   async function loadKeys() {
-    const data = await apiFetch("/admin/keys");
+    const data = await api("/admin/keys");
     const tb = document.getElementById("keys-tbody");
     if (!data.ok || !data.keys.length) { tb.innerHTML = `<tr><td colspan="7" class="empty">No keys yet.</td></tr>`; return; }
     tb.innerHTML = data.keys.map(k => `
@@ -342,26 +269,27 @@ limit [SHOOT] to [5] per [1000] ms</pre>
         <td>${k.activeSessions}</td>
         <td style="color:var(--muted);font-size:.75rem">${k.createdAt.slice(0,10)}</td>
         <td><span class="pill ${k.active ? 'green' : 'red'}">${k.active ? 'ACTIVE' : 'REVOKED'}</span></td>
-        <td>${k.active ? `<button class="ghost" onclick="revokeKey('${k.key}')">Revoke</button>` : ''}</td>
+        <td>${k.active ? `<button class="ghost" style="padding:4px 10px;font-size:.75rem" onclick="revokeKey('${k.key}')">Revoke</button>` : ''}</td>
       </tr>`).join("");
   }
 
   async function createKey() {
     const label  = document.getElementById("newKeyLabel").value || "Unnamed";
     const gameId = document.getElementById("newKeyGame").value  || "";
-    const data   = await apiFetch("/admin/keys", { method: "POST", body: JSON.stringify({ label, gameId }) });
+    const data   = await api("/admin/keys", { method: "POST", body: JSON.stringify({ label, gameId }) });
     if (data.ok) { toast(`Key created: ${data.key}`); loadKeys(); loadOverview(); }
-    else toast("Failed to create key", true);
+    else toast("Failed to create key.", true);
   }
 
   async function revokeKey(key) {
-    if (!confirm(`Revoke key ${key}?`)) return;
-    const data = await apiFetch(`/admin/keys/${key}`, { method: "DELETE" });
-    if (data.ok) { toast("Key revoked."); loadKeys(); } else toast("Failed.", true);
+    if (!confirm(`Revoke ${key}?`)) return;
+    const data = await api(`/admin/keys/${key}`, { method: "DELETE" });
+    if (data.ok) { toast("Key revoked."); loadKeys(); }
+    else toast("Failed.", true);
   }
 
   async function loadSessions() {
-    const data = await apiFetch("/admin/sessions");
+    const data = await api("/admin/sessions");
     const tb = document.getElementById("sessions-tbody");
     if (!data.ok || !data.sessions.length) { tb.innerHTML = `<tr><td colspan="6" class="empty">No active sessions.</td></tr>`; return; }
     tb.innerHTML = data.sessions.map(s => `
@@ -369,19 +297,20 @@ limit [SHOOT] to [5] per [1000] ms</pre>
         <td>${s.playerId}</td>
         <td style="font-family:var(--mono);font-size:.75rem;color:var(--muted)">${s.sessionId.slice(0,12)}…</td>
         <td style="font-size:.75rem;color:var(--muted)">${s.apiKey}</td>
-        <td><span class="pill ${s.violations>0?'yellow':'green'}">${s.violations}</span></td>
+        <td><span class="pill ${s.violations > 0 ? 'yellow' : 'green'}">${s.violations}</span></td>
         <td style="font-size:.75rem;color:var(--muted)">${s.lastSeen.slice(11,19)}</td>
         <td><button class="danger" style="padding:4px 10px;font-size:.75rem" onclick="kickSession('${s.sessionId}')">Kick</button></td>
       </tr>`).join("");
   }
 
   async function kickSession(sessionId) {
-    const data = await apiFetch("/admin/kick", { method: "POST", body: JSON.stringify({ sessionId, reason: "ADMIN_KICK" }) });
-    if (data.ok) { toast("Player kicked."); loadSessions(); } else toast("Failed.", true);
+    const data = await api("/admin/kick", { method: "POST", body: JSON.stringify({ sessionId, reason: "ADMIN_KICK" }) });
+    if (data.ok) { toast("Player kicked."); loadSessions(); }
+    else toast("Failed.", true);
   }
 
   async function loadBans() {
-    const data = await apiFetch("/admin/bans");
+    const data = await api("/admin/bans");
     const tb = document.getElementById("bans-tbody");
     if (!data.ok || !data.bans.length) { tb.innerHTML = `<tr><td colspan="3" class="empty">No active bans.</td></tr>`; return; }
     tb.innerHTML = data.bans.map(b => `
@@ -396,20 +325,17 @@ limit [SHOOT] to [5] per [1000] ms</pre>
     const playerId = document.getElementById("banPlayerId").value.trim();
     const mins     = Number(document.getElementById("banMins").value) || 60;
     const reason   = document.getElementById("banReason").value || "MANUAL_BAN";
-    if (!playerId) { toast("Enter a player ID", true); return; }
-    // Use the ban endpoint directly (admin path)
-    const data = await apiFetch("/admin/keys"); // just to check auth
-    if (!data.ok) { toast("Not authenticated", true); return; }
-    // POST to /ban through a fake session isn't ideal — in prod add a proper admin ban route
-    toast(`Ban added for ${playerId} (${mins} mins) — restart server if not reflected`, false);
-    document.getElementById("banPlayerId").value = "";
-    loadBans();
+    if (!playerId) { toast("Enter a player ID.", true); return; }
+    const data = await api("/admin/ban", { method: "POST", body: JSON.stringify({ playerId, durationMins: mins, reason }) });
+    if (data.ok) { toast(`Banned ${playerId}.`); document.getElementById("banPlayerId").value = ""; loadBans(); loadOverview(); }
+    else toast("Failed.", true);
   }
 
-  // Auto-refresh overview every 10s
+  // Auto-refresh every 10s when on live pages
   setInterval(() => {
-    if (ADMIN_PASS && document.getElementById("page-overview").classList.contains("active")) loadOverview();
-    if (ADMIN_PASS && document.getElementById("page-sessions").classList.contains("active")) loadSessions();
+    if (!ADMIN_PASS) return;
+    if (document.getElementById("page-overview").classList.contains("active")) loadOverview();
+    if (document.getElementById("page-sessions").classList.contains("active")) loadSessions();
   }, 10000);
 </script>
 </body>
