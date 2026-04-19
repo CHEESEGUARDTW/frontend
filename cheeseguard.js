@@ -2,21 +2,21 @@
 //  CheeseGuard v2.1 — API Key Security Extension
 //  TurboWarp Custom Extension by TheOfficialCheeseFish
 //
-//  Change SERVER_URL to your deployed backend once and forget it.
+//  Change SERVER_URL to your deployed Render URL.
 //  Players just paste their key — nothing else needed.
 // ===========================================================
 
 (function (Scratch) {
   "use strict";
 
-  // ─── CHANGE THIS TO YOUR DEPLOYED SERVER ───────────────────────────────────
-  const SERVER_URL = "https://yoursite.com";
-  // ───────────────────────────────────────────────────────────────────────────
+  // ── CHANGE THIS TO YOUR RENDER URL ────────────────────────────────────────
+  const SERVER_URL = "https://backend-qr9o.onrender.com";
+  // ─────────────────────────────────────────────────────────────────────────
 
-  let _apiKey     = "";
-  let _sessionId  = "";
-  let _authed     = false;
-  let _authStatus = "NOT_AUTHED";
+  let _apiKey      = "";
+  let _sessionId   = "";
+  let _authed      = false;
+  let _authStatus  = "NOT_AUTHED";
   let _lastVerdict = "NONE";
 
   const _violationQueue = [];
@@ -29,7 +29,7 @@
   let   _pollInterval   = null;
   let   _pollMs         = 3000;
 
-  // ── HELPERS ────────────────────────────────────────────────────────────────
+  // ── HELPERS ───────────────────────────────────────────────────────────────
 
   async function _post(path, body) {
     try {
@@ -83,7 +83,7 @@
     if (_pollInterval) { clearInterval(_pollInterval); _pollInterval = null; }
   }
 
-  // ── EXTENSION ──────────────────────────────────────────────────────────────
+  // ── EXTENSION ─────────────────────────────────────────────────────────────
 
   class CheeseGuard {
     getInfo() {
